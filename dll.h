@@ -16,9 +16,12 @@
 #include "des.h"
 #include "dh.h"
 #include "dsa.h"
+// note sure why, but on android including these is needed to
+// avoid a template error at link time
+#ifdef ANDROID
 #include "ec2n.h"
-//#include "eccrypto.h"
 #include "ecp.h"
+#endif
 #include "files.h"
 #include "fips140.h"
 #include "gcm.h"
